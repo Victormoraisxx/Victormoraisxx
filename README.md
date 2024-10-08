@@ -22,7 +22,7 @@ def pertence_a_fibonacci(numero):
     else:
         return f"O número {numero} não pertence à sequência de Fibonacci."
 
-# Número previamente definido
+ #Número previamente definido
 numero_informado = 21  
 resultado = pertence_a_fibonacci(numero_informado)
 print(resultado)
@@ -32,7 +32,7 @@ O maior valor de faturamento ocorrido em um dia do mês;
 Número de dias no mês em que o valor de faturamento diário foi superior à média mensal.
 vamos lá:
 
-# Exemplo de dados de faturamento diário em formato JSON
+ #Exemplo de dados de faturamento diário em formato JSON
 dados_faturamento = '''
 {
     "faturamento": [100.0, 200.0, 150.0, 0.0, 300.0, 400.0, 0.0, 250.0, 100.0, 200.0]
@@ -42,12 +42,12 @@ dados_faturamento = '''
 dados = json.loads(dados_faturamento)
 faturamentos = dados["faturamento"]
 
-# Calculando menor, maior e média mensal
+#Calculando menor, maior e média mensal
 menor_faturamento = min(filter(lambda x: x > 0, faturamentos))
 maior_faturamento = max(faturamentos)
 media_mensal = sum(faturamentos) / len(list(filter(lambda x: x > 0, faturamentos)))
 
-# Contando dias acima da média
+#Contando dias acima da média
 dias_acima_media = sum(1 for valor in faturamentos if valor > media_mensal)
 
 print(f"Menor faturamento: R${menor_faturamento:.2f}")
@@ -56,7 +56,7 @@ print(f"Número de dias acima da média: {dias_acima_media}")
 
 -- Questão 4 --
 Cálculo percentual de faturamento por estado
-# Faturamento por estado
+#Faturamento por estado
 faturamento = {
     "SP": 67836.43,
     "RJ": 36678.66,
@@ -65,13 +65,13 @@ faturamento = {
     "Outros": 19849.53
 }
 
-# Cálculo do total
+#Cálculo do total
 total_faturamento = sum(faturamento.values())
 
-# Cálculo percentual
+#Cálculo percentual
 percentuais = {estado: (valor / total_faturamento) * 100 for estado, valor in faturamento.items()}
 
-# Exibindo os percentuais
+#Exibindo os percentuais
 for estado, percentual in percentuais.items():
     print(f"{estado}: {percentual:.2f}%")
 
@@ -83,7 +83,7 @@ def inverter_string(s):
         string_invertida += s[i]
     return string_invertida
 
-# String previamente definida
+#String previamente definida
 string_informada = "Olá, mundo!"
 resultado = inverter_string(string_informada)
 print(resultado)
